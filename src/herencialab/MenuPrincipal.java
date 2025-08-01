@@ -44,35 +44,67 @@ public class MenuPrincipal extends VentanaBase {
             crearE.setVisible(true);
         });
         
-        
-        
-        
-        
-        
         JButton rH = new JButton("Registrar Horas");
         rH.setFont(new Font("Arial Black", Font.PLAIN, 12));
         rH.setBounds(opciones.getWidth() + 10, opciones.getHeight(), 65, 30);
         
+        rH.addActionListener(e -> {
+            this.dispose();
+            RegistrarHoras registrarH = new RegistrarHoras();
+            registrarH.setVisible(true);
+        });
         
+       
         JButton rV = new JButton("Registrar Ventas");
         rV.setFont(new Font("Arial Black", Font.PLAIN, 12));
         rV.setBounds(opciones.getWidth(), opciones.getHeight(), 65, 30);
+        
+        rV.addActionListener(e -> {
+            this.dispose();
+            RegistrarVentas registrarV = new RegistrarVentas();
+            registrarV.setVisible(true);
+        });
         
         JButton actF = new JButton("Actualizar Contrato");
         actF.setFont(new Font("Arial Black", Font.PLAIN, 12));
         actF.setBounds(opciones.getWidth() + 10, opciones.getHeight(), 65, 30);
         
+        actF.addActionListener(e -> {
+            this.dispose();
+            ActualizarContrato actuaF = new ActualizarContrato();
+            actuaF.setVisible(true);
+        });
+        
         JButton cPM = new JButton("Calcular Pago");
         cPM.setFont(new Font("Arial Black", Font.PLAIN, 12));
         cPM.setBounds(opciones.getWidth(), opciones.getHeight(), 65, 30);
+        
+        cPM.addActionListener(e -> {
+            this.dispose();
+            CalcularPago calcPago = new CalcularPago();
+            calcPago.setVisible(true);
+        });
+        
         
         JButton repE = new JButton("Generar Reportes");
         repE.setFont(new Font("Arial Black", Font.PLAIN, 12));
         repE.setBounds(opciones.getWidth(), opciones.getHeight(), 65, 30);
         
+        repE.addActionListener(e -> {
+            this.dispose();
+            Reportes repo = new Reportes();
+            repE.setVisible(true);
+        });
+        
         JButton buscE = new JButton("Buscar Empleados");
         buscE.setFont(new Font("Arial Black", Font.PLAIN, 12));
         buscE.setBounds(opciones.getWidth(), opciones.getHeight(), 65, 30);
+        
+        buscE.addActionListener(e -> {
+            this.dispose();
+            BuscarEmpleado buscar = new BuscarEmpleado();
+            buscar.setVisible(true);
+        });
         
         JButton[] botOpc = {crearEmp, rH, rV, actF, cPM, repE, buscE};
         
@@ -91,25 +123,6 @@ public class MenuPrincipal extends VentanaBase {
             }
         }
         return null;
-    }
-    
-    public static boolean crearEmpleado(String tipo, int cod, String name, double salario, double tasaCom){
-        if(buscarEmpleado(cod) == null){
-            switch(tipo){
-                case "venta":
-                empleados.add(new EmpleadoVentas(cod, name, salario, tasaCom));
-                break;
-                case "temporal":     
-                
-                break;
-                    
-            
-            }
-            
-            return true;
-        }
-    
-        return false;
     }
     
     
