@@ -20,8 +20,6 @@ public double calcularPago(double horasChamba){
     if(!hoy.after(fechaFinContrato)){
         
         return(horasChamba/160.0)*getSalarioBase();
-       
-        
     }else{
         return 0.0;
     }
