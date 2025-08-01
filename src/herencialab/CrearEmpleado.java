@@ -19,6 +19,7 @@ public class CrearEmpleado extends VentanaBase {
     private JTextField code = new JTextField();
     private JTextField nombre  = new JTextField();
     private JTextField salarioBase  = new JTextField();
+    private JComboBox<String> tipo = new JComboBox(new String[]{"venta", "temporal"});
     
     private JButton registrar = new JButton("Registrar");
     private JButton salir = new JButton("Salir");
@@ -83,6 +84,15 @@ public class CrearEmpleado extends VentanaBase {
     
     public void registrarUser(){
         int codigo = Integer.parseInt(code.getText());
+           
+        
+        if(MenuPrincipal.buscarEmpleado(codigo) == null){
+            
+        
+        
+        }else{
+            JOptionPane.showMessageDialog(null, "ERROR, CODIGO DE EMPLEADO YA EXISTE");
+        }
         
         
         
