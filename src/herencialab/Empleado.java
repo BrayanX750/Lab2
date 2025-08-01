@@ -16,6 +16,7 @@ public class Empleado {
     private String nombre;
     private Calendar fechaCreacion;
     private double salarioBase;
+    private String rango = "nulo";
     
     
     public Empleado(int code, String nombre, double salarioBase){
@@ -57,6 +58,25 @@ public class Empleado {
     
     public double calcularPago(double horasChamba){
        return ((horasChamba/160) * this.salarioBase) * 0.965;
+    }
+    
+    public void setRango(int tipo){
+        switch(tipo){
+           case 0:
+               rango = "temporal";
+               break;
+           case 1:
+               rango =  "ventas";
+               break;
+           default:
+               rango = "nulo";
+               break;
+        }  
+    }
+    
+    
+    public String getRango(){
+        return rango;
     }
     
     @Override

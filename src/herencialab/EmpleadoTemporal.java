@@ -11,6 +11,7 @@ public class EmpleadoTemporal extends Empleado {
 private Calendar fechaFinContrato;
 public EmpleadoTemporal(int code, String nombre,double salarioBase, Calendar fechaFinContrato){
     super(code,nombre,salarioBase);
+    setRango(1);
     this.fechaFinContrato=fechaFinContrato;
 }
 

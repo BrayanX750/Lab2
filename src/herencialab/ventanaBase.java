@@ -9,8 +9,8 @@ import java.awt.*;
  *
  * @author unwir
  */
-public class ventanaBase extends JFrame {
-    public ventanaBase(){
+public class VentanaBase extends JFrame {
+    public VentanaBase(){
       initBaseComps();
     }
     
