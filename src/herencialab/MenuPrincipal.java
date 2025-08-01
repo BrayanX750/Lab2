@@ -93,8 +93,18 @@ public class MenuPrincipal extends VentanaBase {
         return null;
     }
     
-    public static boolean crearEmpleado(int tipo, int cod, String name, double salario){
+    public static boolean crearEmpleado(String tipo, int cod, String name, double salario, double tasaCom){
         if(buscarEmpleado(cod) == null){
+            switch(tipo){
+                case "venta":
+                empleados.add(new EmpleadoVentas(cod, name, salario, tasaCom));
+                break;
+                case "temporal":     
+                
+                break;
+                    
+            
+            }
             
             return true;
         }
