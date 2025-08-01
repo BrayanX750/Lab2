@@ -84,6 +84,24 @@ public class MenuPrincipal extends VentanaBase {
  
     }
     
+    public static Empleado buscarEmpleado(int code){
+        for(Empleado a: empleados){
+            if(a.getCode() == code){
+                return a;
+            }
+        }
+        return null;
+    }
+    
+    public static boolean crearEmpleado(int tipo, int cod, String name, double salario){
+        if(buscarEmpleado(cod) == null){
+            
+            return true;
+        }
+    
+        return false;
+    }
+    
     
     
     
