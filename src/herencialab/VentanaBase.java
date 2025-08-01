@@ -3,12 +3,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package herencialab;
+
 import javax.swing.*;
 import java.awt.*;
-/**
- *
- * @author unwir
- */
+import static javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE;
+
 public class VentanaBase extends JFrame {
     public VentanaBase(){
       initBaseComps();

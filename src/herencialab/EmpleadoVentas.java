@@ -11,7 +11,9 @@ public class EmpleadoVentas extends Empleado {
     private final double tasaComision;
 
     public EmpleadoVentas(int code, String nombre, double salarioBase, double tasaComision) {
+        
         super(code, nombre, salarioBase);
+        
         this.tasaComision = tasaComision;
         this.ventasMensuales = new double[12];  
     }
@@ -21,7 +23,7 @@ public class EmpleadoVentas extends Empleado {
         ventasMensuales[mesActual] += monto;
     }
 
-    public double calcularComisionMesActual() {
+    public double calcularComisionMesActual() { 
         int mesActual = Calendar.getInstance().get(Calendar.MONTH);
         return ventasMensuales[mesActual] * tasaComision;
     }
