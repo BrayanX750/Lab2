@@ -67,6 +67,17 @@ public class CrearEmpleado extends VentanaBase {
        
         add(salTit);
         add(salarioBase);
+        
+        
+                
+        JLabel tipoTit = new JLabel();
+        tipoTit.setText("Tipo Empleado");
+        tipoTit.setFont(new Font("Arial Black", Font.PLAIN, 12));
+        tipoTit.setBounds(230, 110 + 100, 130, 50);
+        tipo.setBounds(230, 150 + 100, 200, 20);
+       
+        add(tipoTit);
+        add(tipo);
 
         registrar.setFont(new Font("Arial Black", Font.PLAIN, 12));
         registrar.setForeground(Color.green);
